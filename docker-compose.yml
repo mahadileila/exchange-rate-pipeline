@@ -3,9 +3,9 @@ services:
     image: postgres:16
     container_name: exchange_rate_db
     environment:
-      POSTGRES_USER: etl
-      POSTGRES_PASSWORD: etl
-      POSTGRES_DB: exchange_rate
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     volumes:
